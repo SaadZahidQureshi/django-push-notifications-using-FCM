@@ -9,13 +9,7 @@ if ('serviceWorker' in navigator) {
         // Initialize Firebase
         if (!firebase.apps.length) {
             firebase.initializeApp({
-                apiKey: "AIzaSyBv51-4hNiLPbReyBWeR3ncI7o98zZiIoY",
-                authDomain: "underoneroof-a0b22.firebaseapp.com",
-                projectId: "underoneroof-a0b22",
-                storageBucket: "underoneroof-a0b22.appspot.com",
-                messagingSenderId: "180332848840",
-                appId: "1:180332848840:web:8a0214c135f87560cc27fd",
-                measurementId: "G-RNP5F9N3NQ"
+                // fcm configs here
             });
         }
 
@@ -28,7 +22,7 @@ if ('serviceWorker' in navigator) {
         messaging.requestPermission()
         .then(() => {
             console.log('Notification permission granted.');
-            return messaging.getToken({ vapidKey: 'BNg7QfCZ6q-22qwBsu8HdraqxyGUsVzd2-kipgjBdzTlroNu3aH0rCYWW-fN7K-VFBHTcWKoWYTZUKYqkMwlZtU' });
+            return messaging.getToken({ vapidKey: 'your vapid key' });
         })
         .then((token) => {
             if (token) {
