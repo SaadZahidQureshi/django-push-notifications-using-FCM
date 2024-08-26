@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>Order Placed.</h5>
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
+    import { getMessaging, onMessage } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-messaging.js";
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyBv51-4hNiLPbReyBWeR3ncI7o98zZiIoY",
+        authDomain: "underoneroof-a0b22.firebaseapp.com",
+        projectId: "underoneroof-a0b22",
+        storageBucket: "underoneroof-a0b22.appspot.com",
+        messagingSenderId: "180332848840",
+        appId: "1:180332848840:web:8a0214c135f87560cc27fd",
+        measurementId: "G-RNP5F9N3NQ"
+    };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  
+    // Initialize Firebase Cloud Messaging
+    const messaging = getMessaging(app);
+  
+    // Handle incoming messages
+    onMessage(messaging, (payload) => {
+        console.log('Message received. ', payload);
+        // Show the notification in your frontend (e.g., in a dropdown)
+        // You can use custom logic to append it to the notification dropdown.
+    });
+</script>
+</html>
