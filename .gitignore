@@ -21,6 +21,8 @@ db.sqlite3
 venv/*
 stripe.exe
 
+underoneroof-a0b22-firebase-adminsdk-o5yo9-efcfd01051.json
+
 byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
